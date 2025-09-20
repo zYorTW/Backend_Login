@@ -1,3 +1,4 @@
+
 create database control_usuarios;
 use control_usuarios;
 
@@ -13,7 +14,7 @@ CREATE TABLE permisos (
 );
 
 CREATE TABLE rol_permiso (
-    id_rol_permiso INT AUTO_INCREMENT PRIMARY KEY,
+	id_rol_permiso INT AUTO_INCREMENT PRIMARY KEY,
     id_rol INT,
     permiso_id INT,
     FOREIGN KEY (id_rol) REFERENCES roles(id_rol),
@@ -21,7 +22,7 @@ CREATE TABLE rol_permiso (
 );
 
 CREATE TABLE usuarios (
-    id_usuario INT AUTO_INCREMENT PRIMARY KEY,
+	id_usuario INT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(100),
     email VARCHAR(300),
     clave VARCHAR(500),
@@ -52,14 +53,17 @@ INSERT INTO rol_permiso (id_rol, permiso_id) VALUES
 INSERT INTO rol_permiso (id_rol, permiso_id) VALUES
 (2, 2);
 
--- Insertar usuario Admin (Contraseña: 123456)
+-- Insertar usuario Admin (contraseña: 123456)
 INSERT INTO usuarios (nombre, email, clave, id_rol)
 VALUES
-('Admin', 'admin@gmail.com', '$2b$10$wLyuMd5mP.D5YekCua2uSOQIRxVXFyKmpz3go/ryHgHU1ihTtioa6', 1);
+('Admin', 'admin@gmail.com', '$2b$10$wLywMd5mP.DSYekcUa2uSOQIRXvXFyKmpz3go/rygHgHUlihTtioa6', 1);
 -- La contraseña es: 1
 
--- Insertar usuario Empleado (Contraseña: 123456)
+-- Insertar usuario Empleado (contraseña: 123456)
 INSERT INTO usuarios (nombre, email, clave, id_rol)
 VALUES
-('Empleado', 'empleado@gmail.com', '$2b$10$wLyuMd5mP.D5YekCua2uSOQIRxVXFyKmpz3go/ryHgHU1ihTtioa6', 2);
+('Empleado', 'empleado@gmail.com', '$2b$10$wLywMd5mP.DSYekcUa2uSOQIRXvXFyKmpz3go/rygHgHUlihTtioa6', 2);
 -- La contraseña es: 1
+
+
+
